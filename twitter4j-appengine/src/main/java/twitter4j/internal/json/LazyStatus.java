@@ -243,6 +243,11 @@ final class LazyStatus implements twitter4j.Status {
         return getTarget().isPossiblySensitive();
     }
 
+    @Override
+    public String getIsoLanguageCode() {
+        return getTarget().getIsoLanguageCode();
+    }
+
     /**
      * Returns an array of user mentions in the tweet, or null if no users were
      * mentioned.
@@ -299,10 +304,6 @@ final class LazyStatus implements twitter4j.Status {
         return getTarget().compareTo(target);
     }
 
-    @Override
-    public String getIsoLanguageCode() {
-        return getTarget().getIsoLanguageCode();
-    }
 
     @Override
     public boolean equals(Object o) {
